@@ -28,12 +28,29 @@
   * https://github.com/FokkeZB/J2M
 
 * Installation (Debian WSL)
-    ~~~
-    sudo apt-get update
-    sudo apt-get install nodejs npm
+    * Check what is the latest version https://nodejs.org/en/download/
+    * For adding the latest release repository
+        ~~~
+        sudo apt-get install curl software-properties-common; \
+        curl -sL https://deb.nodesource.com/setup_15.x | sudo bash -
+        ~~~
+    * For adding the LTS release repository
+        ~~~
+        sudo apt-get install curl software-properties-common
+        curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
+        ~~~
 
-    sudo npm install -g j2m
-    ~~~
+    * Install Node.js and npm
+        ~~~
+        sudo apt-get update; \
+        sudo apt-get install -y nodejs; \
+        node -v; \
+        npm -v
+
+    * Install j2m
+        ~~~
+        sudo npm install -g j2m
+        ~~~
 
 * Usage
     ~~~
