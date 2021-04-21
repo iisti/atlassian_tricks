@@ -1,6 +1,7 @@
 # Create Field for allowing single customer users to access single tickets.
 * Source https://community.atlassian.com/t5/Jira-articles/How-to-allow-a-user-to-see-specific-tickets-w-o-issue-security/ba-p/870195
 
+### Create "Allow Users" field
 1. Administration -> Issues -> Custom Fields
 1. Add Custom Field
 1. Advanced -> User Picker (multiple users)
@@ -20,11 +21,25 @@
         ~~~
     * Go to Administration -> Screens -> Default Screen ->  Select Field -> Allow Users
 1. In the ticket, click Edit and add users to Allow Users field.
-1. The newly added Field should show up users in the right “People section”, not in the “Details section”
-1. Go to Project -> Administration -> Permissions -> Edit Permissions (Browse Projects, etc) -> Add “User Custom Field Value”
+1. The newly added Field should show up users in the right "People section", not in the "Details section"
+1. Go to Project -> Administration -> Permissions -> Edit Permissions (Browse Projects, etc) -> Add "User Custom Field Value"
 1. If Issue Security has been configured, the “User Custom Field Value” needs to be added in the desired security levels.
-    * Project -> Administration -> Issue Security -> Actions -> Edit Issue Security -> Add the “User Custom Field Value” to desired security levels.
-1. Now the users defined in the “Allow Users” should see the ticket.
+    * Project -> Administration -> Issue Security -> Actions -> Edit Issue Security -> Add the "User Custom Field Value" to desired security levels.
+1. Now the users defined in the "Allow Users" should see the ticket.
+
+### Add reporter automatically to "Allow Users" field
+1. JIRA -> Project -> Administration -> Workflows -> Operations (click pen to edit)
+1. Switch the edit mode into Diagram
+1. Click the first transition "Create Issue"
+1. Options menu should pop up, select Post Functions
+1. Click Add post function
+1. Select "Copy Value From Other Field" function
+1. Set Source Field: Reporter
+1. Set Destination Field: Allow Users (User Picker (multiple users))
+1. Set Option: Copy within the same issue
+1. Now you should have post function "The field Allow Users will take the value from Reporter. Source and destination issue are the same."
+1. Move the newly created post function to the second last, before "Fire a Issue Created event that can be processed by the listeners."
+
 
 ### Permissions
 * Field "Allow Users"
