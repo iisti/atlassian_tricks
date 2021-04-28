@@ -1,4 +1,4 @@
-# Instructions how to retrieve a JIRA ticket via JIRA REST API and convert it into GitHub Markdown
+# How to retrieve a JIRA ticket via JIRA REST API and convert it into GitHub Markdown
 
 * REST API URL for reading/retrieving tickets in JSON.
   ~~~
