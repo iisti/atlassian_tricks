@@ -19,7 +19,7 @@
                 • the Screen Scheme 'Company Screen Scheme', or
                 • the Issue Type Screen Scheme 'Company Issue Type Screen Scheme'
         ~~~
-    * Go to Administration -> Screens -> Default Screen ->  Select Field -> Allow Users
+    * Go to Administration -> Screens -> Default Screen -> Configure -> Select Field -> Allow Users
 1. In the ticket, click Edit and add users to Allow Users field.
 1. The newly added Field should show up users in the right "People section", not in the "Details section"
 1. Go to Project -> Administration -> Permissions -> Edit Permissions (Browse Projects, etc) -> Add "User Custom Field Value"
