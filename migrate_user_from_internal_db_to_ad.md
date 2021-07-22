@@ -2,8 +2,10 @@
 * Bulk instructions https://confluence.atlassian.com/adminjiraserver/migrating-users-between-user-directories-938847059.html
 
 ## Migrating single user from JIRA Internal Directory into Microsoft Active Directory
-1. Create  **JIRA Internal Directory* user *test.jira01**.
-1. Create test ticket with the **test.jira01** and add to groups.
+* Tested migration process by creating one JIRA Internal Directory user and migrating the user into MS AD.
+### Test process
+1. Created **JIRA Internal Directory** user **test.jira01**.
+1. Created test ticket with the **test.jira01** and added to groups.
     * User information
     ```
     Username    Full Name                   Login Details   Groups                  Directory                   Operations
@@ -14,9 +16,9 @@
 
     There are currently no project role associations for this user.
     ```
-1. Comment in the ticket wit the **test.jira01**.
-1. Log work with **test.jira01**.
-1. Remove test.jira01 from **JIRA Internal Directory**
+1. Commented in the ticket wit the **test.jira01**.
+1. Logged work with **test.jira01**.
+1. Removed test.jira01 from **JIRA Internal Directory**
     * Can't be done. An error pops up:
     ```
     Delete User: test.jira01
@@ -26,7 +28,7 @@
         Reported Issue: 1 issue
         Issue Comments: 1
     ```
-1. Create in AD with same name and email address.
+1. Created in AD with same name and email address.
 1. Added into same JIRA groups
     * Jira_Customer_customer01
     * Jira_Internal_All
