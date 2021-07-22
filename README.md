@@ -1,3 +1,3 @@
 # Atlassian tricks
 
-A repository for collecting instructions for Atlassian products.
+A collecting of instructions for Atlassian products.
